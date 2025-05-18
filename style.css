@@ -1,0 +1,22 @@
+.formal {
+    border-radius: 50%;
+    padding: 5px;
+    margin: 10px;
+    margin-bottom: 30px;
+  }
+
+  .caption {
+    font-size: 25px;
+    margin-top: 20px;
+
+  }
+
+  .greeting {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: light;
+  }
+
+  .bg {
+    background-color: #F9FFD0;
+  }
