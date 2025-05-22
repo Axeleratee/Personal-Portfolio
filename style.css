@@ -3,6 +3,10 @@
   background-color: #F9FFD0;
 }
 
+html {
+  background-color: #F9FFD0;
+}
+
 *{
   cursor: url('./Images/flipped.png') auto;
 }
@@ -56,7 +60,7 @@
 
   .background-div {
     width: 100%;
-    height: 100vh; /* o depende sa gusto mong taas */
+    height: 100%; /* o depende sa gusto mong taas */
     background-image: url('./Images/bg2.png');
     background-size: cover;       /* para punuin ang buong div */
     background-position: center;  /* para gitna ang image */
@@ -77,14 +81,10 @@
   animation-delay: 3s; /* you can vary per card */
 }
 
-  @media (max-width:700px) {
+  @media (max-width:1200px) {
     .background-div {
     width: 100%;
     height: auto; /* o depende sa gusto mong taas */
-    background-image: url('./Images/bg2.png');
-    background-size: cover;       /* para punuin ang buong div */
-    background-position: center;  /* para gitna ang image */
-    background-repeat: no-repeat;
     }
   }
 
@@ -139,7 +139,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 2%;
+}
+
+@media (max-width: 600px) {
+  .skills {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill2 {
+    order: 2;
+  }
 }
 
 .skill1, .skill2, .skill3 {
@@ -214,7 +226,7 @@
   background-color: #F9FFD0;
   min-height: 100vh; /* change from fixed height */
   align-items: center;
-  padding: 20px;
+  padding: 20px 120px;
   box-sizing: border-box;
 }
 
@@ -635,36 +647,88 @@ ul.under-development {
   margin-top: 60px;
 }
 
-@media screen and (max-width: 1024px) {
-  .cp {
-    font-size: 100px;
-  }
+.Contact {
+  background-color:#F9FFD0;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 50px;
+  padding: 60px 230px;
+}
 
-  .cp1, .cp2, .cp3, .cp4 {
-    flex: 1 1 100%; /* stack vertically */
-    max-width: 100%;
-  }
-
-  .s-unlocked {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+@media (max-width: 768px) {
+  .Contact {
+    grid-template-columns: 1fr; /* single column layout on smaller screens */
+    padding: 70px;
+    text-align: center;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .cp {
-    font-size: 50px;
-  }
-
-
-  .icon {
-    height: 120px;
-  }
-
-  .cp1, .cp2, .cp3, .cp4 {
-    padding: 20px;
-  }
-
-  .s-unlocked {
+@media (min-width: 769px) and (max-width: 1024px) {
+  .Contact {
     grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+    padding: 10%;
   }
+}
+
+@media (min-width: 1025px) {
+  .Contact {
+  background-color:#F9FFD0;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 50px;
+  padding: 60px 230px;
+  }
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+  }
+}
+
+.contact-info {
+  font-family: "Alegreya", serif;
+  font-optical-sizing: auto;
+}
+
+#Poke {
+  color: red;
+}
+
+.contact-info p{
+  font-size: 20px;
+  font-family: "Alegreya", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+}
+
+div.contact {
+  align-items: center;
+}
+
+.photo {
+  display: flex;
+  justify-content: end;
+}
+
+#Call {
+  height: 300px;
+  width: 300px;
+  border-radius: 20px;
+}
+
+.container {
+  background-color: #F9FFD0;
 }
